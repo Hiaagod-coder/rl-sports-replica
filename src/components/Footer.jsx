@@ -7,7 +7,7 @@ const Footer = () => {
       {/* Chamada Principal */}
       <h3 className="text-white text-3xl font-bold mb-2 tracking-tight">Prova de amor ou cardio?</h3>
       <h4 className="text-[#3B82F6] text-3xl font-bold mb-12 tracking-tight">Venha descobrir na RL SPORTS.</h4>
-      
+
       {/* --- ÁREA DOS INSTAGRAMS --- */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-20">
         
@@ -22,7 +22,7 @@ const Footer = () => {
             <Instagram size={24} />
           </div>
           <div className="text-left">
-            <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Loja e Equipe</p>
+            <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Equipe</p>
             <p className="text-white font-bold text-lg tracking-wide group-hover:text-[#3B82F6] transition-colors">@rlsportsrunning</p>
           </div>
         </a>

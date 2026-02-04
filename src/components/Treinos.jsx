@@ -23,8 +23,8 @@ const Treinos = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
-          {/* --- COLUNA ESQUERDA: FOTO + WHATSAPP GRUPO --- */}
-          <div className="relative group order-2 lg:order-1 sticky top-24">
+          {/* --- COLUNA ESQUERDA: FOTO --- */}
+          <div className="relative group order-2 lg:order-1">
             
             {/* Foto da Turma */}
             <div className="relative rounded-3xl overflow-hidden border border-[#3B82F6]/30 shadow-2xl aspect-video box-glow mb-8">
@@ -35,6 +35,7 @@ const Treinos = () => {
               <img 
                 src="/foto-turma.webp" 
                 alt="Turma RL Sports" 
+                decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1552674605-4694c0427eef?q=80&w=2070&auto=format&fit=crop'; }} 
               />
@@ -61,7 +62,7 @@ const Treinos = () => {
           {/* --- COLUNA DIREITA: INFORMAÇÕES --- */}
           <div className="flex flex-col gap-6 order-1 lg:order-2">
             
-            {/* 1. CARD DE PREÇO + BOTÃO AGENDAR */}
+            {/* 1. CARD DE PREÇO */}
             <div className="bg-[#0F172A] border border-[#3B82F6]/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden ring-1 ring-blue-500/20">
                <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-[#3B82F6]/10 blur-3xl rounded-full"></div>
                
@@ -107,12 +108,12 @@ const Treinos = () => {
               </div>
             </div>
 
-            {/* 3. LOCAIS (LINKS CLICÁVEIS PARA O MAPS) */}
+            {/* 3. LOCAIS */}
             <div className="space-y-4">
               
-              {/* LOCAL 1: VILA (ETPC) */}
+              {/* LOCAL 1 */}
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=R.+Trinta+e+Nove,+2-156+-+Sessenta,+Volta+Redonda+-+RJ,+27261-120"
+                href="https://maps.google.com/?q=R.+Trinta+e+Nove,+2-156+-+Sessenta,+Volta+Redonda+-+RJ,+27261-120"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-[#0B1120] border border-[#3B82F6]/20 p-5 rounded-2xl hover:border-[#3B82F6] hover:bg-[#3B82F6]/5 transition-all group cursor-pointer relative"
@@ -135,9 +136,9 @@ const Treinos = () => {
                 </div>
               </a>
 
-              {/* LOCAL 2: MORRÃO */}
+              {/* LOCAL 2 */}
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=R.+K,+93+-+Jardim+Primavera,+Volta+Redonda+-+RJ"
+                href="https://maps.google.com/?q=R.+K,+93+-+Jardim+Primavera,+Volta+Redonda"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-[#0B1120] border border-[#3B82F6]/20 p-5 rounded-2xl hover:border-[#3B82F6] hover:bg-[#3B82F6]/5 transition-all group cursor-pointer relative"

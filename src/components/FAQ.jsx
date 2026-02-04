@@ -32,11 +32,9 @@ const FAQ = () => {
   ];
 
   return (
-    // ADICIONEI id="faq" AQUI PARA O BOTÃO FUNCIONAR
     <section id="faq" className="py-24 bg-[#020617] px-4 relative">
       <div className="max-w-4xl mx-auto">
         
-        {/* Cabeçalho */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4">
             <HelpCircle size={20} className="text-[#3B82F6]" />
@@ -47,11 +45,10 @@ const FAQ = () => {
           </h2>
         </div>
 
-        {/* Lista de Perguntas */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div 
-              key={index} 
+              key={index}
               className={`bg-[#0B1120] border rounded-2xl overflow-hidden transition-all duration-300 ${
                 openIndex === index 
                   ? 'border-[#3B82F6] shadow-[0_0_15px_rgba(59,130,246,0.15)]' 

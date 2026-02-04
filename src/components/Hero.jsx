@@ -7,6 +7,8 @@ const Hero = () => {
         <img 
           src="/hero-bg.webp" 
           alt="Fundo Corredor" 
+          fetchpriority="high"
+          decoding="async"
           className="w-full h-full object-cover opacity-50"
           onError={(e) => { e.target.style.display = 'none'; }}
         />
@@ -36,8 +38,7 @@ const Hero = () => {
           De iniciantes ao alto rendimento. Treinos específicos sob a orientação do <span className="text-blue-400 font-bold">Prof. Rafael Lima</span>.
         </p>
 
-        {/* --- BOTÃO DE AÇÃO (Link para Assessoria) --- */}
-        {/* Agora é um <a> que leva para #assessoria e sem o ícone */}
+        {/* --- BOTÃO DE AÇÃO --- */}
         <a 
           href="#assessoria"
           className="btn-neon-pulse bg-[#3B82F6] text-[#020617] px-12 py-5 rounded-xl font-black text-base uppercase tracking-widest transition-all inline-flex items-center justify-center mx-auto shadow-[0_0_20px_rgba(59,130,246,0.6)] hover:bg-blue-500 hover:scale-105 cursor-pointer"

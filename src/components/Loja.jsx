@@ -1,4 +1,4 @@
-import { ShoppingBag, Tag, ChevronsRight } from 'lucide-react'; // Adicionei ChevronsRight
+import { ShoppingBag, Tag, ChevronsRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 
@@ -6,7 +6,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const Loja = () => {
-  // Número do WhatsApp da equipe
   const whatsappNumber = "5524999074844";
 
   const products = [
@@ -31,13 +30,11 @@ const Loja = () => {
   return (
     <section id="loja" className="py-24 bg-[#020617] px-4 relative overflow-hidden">
       
-      {/* Luz de fundo */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-900/10 blur-[120px] -z-0 pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         
-        {/* Cabeçalho */}
-        <div className="text-center mb-10"> {/* Reduzi margin-bottom para caber a dica */}
+        <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 mb-4">
               <Tag size={16} className="text-blue-500" />
               <span className="text-blue-500 font-bold uppercase tracking-widest text-xs">Loja Oficial</span>
@@ -51,13 +48,11 @@ const Loja = () => {
           </p>
         </div>
 
-        {/* --- DICA DE SWIPE (APENAS MOBILE) --- */}
         <div className="flex md:hidden items-center justify-center gap-2 mb-6 text-blue-500/80 animate-pulse">
             <span className="text-[10px] font-black uppercase tracking-[0.2em]">Deslize para ver mais</span>
-            <ChevronsRight size={16} className="animate-bounce-x" /> {/* Ícone de setas */}
+            <ChevronsRight size={16} className="animate-bounce-x" />
         </div>
 
-        {/* --- CARROSSEL --- */}
         <div className="px-4 md:px-0">
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -76,22 +71,20 @@ const Loja = () => {
           >
             {products.map((product) => (
               <SwiperSlide key={product.id}>
-                {/* CARD DO PRODUTO */}
                 <div className="bg-[#0B1120] border border-[#3B82F6]/20 rounded-3xl p-6 group hover:border-[#3B82F6]/50 transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
                   
-                  {/* Área da Imagem */}
                   <div className="relative h-72 mb-6 flex items-center justify-center p-4 bg-blue-900/5 rounded-2xl overflow-hidden group-hover:bg-blue-900/10 transition-colors">
                     <div className="absolute inset-0 bg-[#3B82F6]/20 blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500 rounded-full scale-75"></div>
                     
                     <img 
                       src={product.image} 
                       alt={product.name} 
+                      decoding="async"
                       className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] group-hover:drop-shadow-[0_10px_25px_rgba(59,130,246,0.4)] transition-all duration-500 z-10 relative"
                       onError={(e) => { e.target.src = 'https://placehold.co/400x500/0B1120/3B82F6?text=Manto+RL'; }}
                     />
                   </div>
 
-                  {/* Informações */}
                   <div className="flex-grow flex flex-col justify-between">
                     <div>
                       <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-2">{product.type}</p>
@@ -107,7 +100,6 @@ const Loja = () => {
                         </div>
                       </div>
                       
-                      {/* BOTÃO WHATSAPP */}
                       <a 
                         href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(product.message)}`}
                         target="_blank"

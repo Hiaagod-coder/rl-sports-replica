@@ -7,18 +7,16 @@ const About = () => {
         
         {/* Lado Esquerdo: Imagem com Overlay */}
         <div className="relative group">
-          {/* Efeito de brilho atrás da imagem */}
           <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
           
           <div className="relative rounded-3xl overflow-hidden border border-white/10 aspect-[4/5]">
-            {/* IMPORTANTE: Coloque sua foto na pasta public com o nome rafael-lima.jpg */}
             <img 
               src="/rafael-lima.webp" 
               alt="Prof. Rafael Lima" 
+              decoding="async"
               className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
             />
             
-            {/* Overlay com Texto sobre a imagem */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-8">
                <div className="bg-blue-900/40 backdrop-blur-md border border-blue-500/30 p-4 rounded-xl">
                 <p className="text-blue-400 font-bold text-sm">PROF. RAFAEL LIMA</p>

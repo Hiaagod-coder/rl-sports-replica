@@ -92,7 +92,7 @@ const Treinos = () => {
               </h4>
               <div className="space-y-3">
                 {[
-                  "Aulas em Grupo Dinâmicas", 
+                  "Aulas Dinâmicas em Grupo", 
                   "Iniciação e Aprimoramento Técnico", 
                   "Testes de Condicionamento Periódicos", 
                   "Participação em Treinos Externos",

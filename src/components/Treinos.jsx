@@ -33,7 +33,7 @@ const Treinos = () => {
               </div>
 
               <img 
-                src="/foto-turma.webp" 
+                src="/foto-turma1.webp" 
                 alt="Turma RL Sports" 
                 decoding="async"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"

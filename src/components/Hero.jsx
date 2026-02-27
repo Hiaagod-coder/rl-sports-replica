@@ -2,17 +2,25 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 px-4 text-center overflow-hidden bg-[#020617]">
 
-      {/* --- CAMADAS DE FUNDO --- */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      {/* --- CAMADAS DE FUNDO (Adaptável para PC e Mobile) --- */}
+      <picture className="absolute inset-0 w-full h-full z-0">
+        {/* Celular: Imagem em pé (até 767px de largura) */}
+        <source media="(max-width: 767px)" srcSet="/kio-bg-mobile.webp" />
+        
+        {/* Computador/Tablet: Imagem deitada (a partir de 768px) */}
+        <source media="(min-width: 768px)" srcSet="/kip-bg-pc.webp" />
+        
+        {/* Imagem Padrão (se o source falhar) e onde vão as classes CSS */}
         <img 
-          src="/hero-bg.webp" 
+          src="/kip-bg-pc.webp" 
           alt="Fundo Corredor" 
           fetchpriority="high"
           decoding="async"
           className="w-full h-full object-cover opacity-50"
           onError={(e) => { e.target.style.display = 'none'; }}
         />
-      </div>
+      </picture>
+      
       <div className="absolute inset-0 w-full h-full z-0 bg-black/60"></div>
       <div className="absolute inset-0 w-full h-full z-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent opacity-80 mix-blend-overlay"></div>
 

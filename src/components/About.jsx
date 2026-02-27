@@ -11,7 +11,7 @@ const About = () => {
           
           <div className="relative rounded-3xl overflow-hidden border border-white/10 aspect-[4/5]">
             <img 
-              src="/rafael-lima.webp" 
+              src="/rafa.webp" 
               alt="Prof. Rafael Lima" 
               decoding="async"
               className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"

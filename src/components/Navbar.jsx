@@ -32,10 +32,14 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-24 items-center">
             
-            {/* Logo */}
+            {/* --- LOGO (Imagem) --- */}
             <div className="flex items-center">
-              <a href="#" onClick={(e) => handleLinkClick(e, 'Início')} className="text-[#3B82F6] text-2xl font-bold tracking-tighter drop-shadow-lg cursor-pointer">
-                RL SPORTS
+              <a href="#" onClick={(e) => handleLinkClick(e, 'Início')} className="cursor-pointer">
+                <img 
+                  src="/rl-sports-logo.webp" 
+                  alt="Logo RL Sports" 
+                  className="h-20 w-auto drop-shadow-lg hover:scale-105 transition-transform" 
+                />
               </a>
             </div>
 
@@ -54,7 +58,6 @@ const Navbar = () => {
             </div>
 
             {/* --- BOTÃO INSTAGRAM (DESKTOP) --- */}
-            {/* Substituí o botão de Contato por este aqui */}
             <div className="hidden md:block">
               <a 
                 href="https://www.instagram.com/rlsportsrunning"
@@ -85,9 +88,13 @@ const Navbar = () => {
         {/* Fundo decorativo */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent opacity-50 pointer-events-none"></div>
 
-        {/* --- CABEÇALHO DO MENU --- */}
+        {/* --- CABEÇALHO DO MENU (Logo em Imagem aqui também) --- */}
         <div className="absolute top-0 left-0 w-full px-4 h-24 flex items-center justify-between z-20">
-          <span className="text-[#3B82F6] text-2xl font-bold tracking-tighter drop-shadow-lg">RL SPORTS</span>
+          <img 
+            src="/rl-sports-logo.webp" 
+            alt="Logo RL Sports" 
+            className="h-12 w-auto drop-shadow-lg" 
+          />
           <button onClick={() => setIsOpen(false)} className="text-white hover:text-[#3B82F6] transition-colors">
             <X size={32} />
           </button>
